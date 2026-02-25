@@ -56,6 +56,26 @@ public class PalindromeCheckerApp {
         else{
             System.out.println("Not Palindrome");
         }
+        //UC5
+        Stack<Character> stack = new Stack<>();
+
+        for(int i = 0; i < str.length(); i++){
+            stack.push(str.charAt(i));
+        }
+        for(int i = 0; i < str.length(); i++){
+            if(str.charAt(i) != stack.pop()){
+                isPalindrome = false;
+                break;
+            }
+        }
+
+        if(isPalindrome){
+            System.out.println("Palindrome");
+        }
+        else{
+            System.out.println("Not Palindrome");
+        }
+
         sc.close();
     }
 
